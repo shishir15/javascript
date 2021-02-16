@@ -1,0 +1,961 @@
+var x=5;
+var car= "volvo";
+var y=10;
+var z=x+y;
+alert(z);
+
+<button onclick="document.getElementById('myimage').src='pic_bulb_ON.gif'">Turn on the light</button>
+
+<button onclick="document getElementById('myimage').src='pic_bulb_off.gif'">
+
+
+<button type="button" onclick= "document.getElementById('demo').innerHTML='hello javascript!!!'> Click Me!</button>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+
+<img id="myIMG" src="pic_bulb_off.gif" style="width:=100px">
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+
+
+
+//TO MAKE DISPLAY TO HIDE AND SHOW
+document.getElementById("demo").style.display = "none";//HIDE
+document.getElementById("demo").style.display = "block";//SHOW
+
+IT CAN BE EXPRESSED IN ID
+<p id="demo" style="display:none">Hello JavaScript!</p>
+<button type="button" onclick="document.getElementById('demo').style.display='block'">CLICK ME</button>
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+
+##CALLING A FUNCTION OF J.SCRIPT 
+<head>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+</head>
+
+<body>
+<h2>JavaScript in Head</h2>
+<p id="demo">A Paragraph.</p>
+<button type="button" onclick="myFunction()">Try it</button>
+</body>
+
+
+TO RUN SCRIPT FROM EXTERNAL FILE
+<script src="sourse.js"></script>
+<script src="myScript.js"></script>  ///##External scripts cannot contain <script> tags.
+<script src="https://www.w3schools.com/js/myScript.js"></script>  //##EXTERNAL REFERRENCE--External scripts can be referenced with a full URL or with a path relative to the current web page.
+
+This example uses a full URL to link to a script
+<script src="/js/myScript1.js"></script>    //##This example uses a script located in a specified folder on the current web site:
+<script src="myScript1.js"></script>  //##WHEN SCRIPT IS LOCATED AT SAME FOLDER OF CURRENT PAGE
+
+
+
+##FOUR DISPLAYING PROCEDURE
+
+<p id="demo">hei there</p>
+<script>
+    document.getElementById("demo").innerHTML="FIRST DAY AT OFFICE";
+</script>
+
+
+<p id="demo">hei there</p>
+<script>  
+    document.getElementById("demo").write(5+6);
+</script>
+##Never call document.write after the document has finished loading. It will overwrite the whole document.
+  Using document.write() after an HTML document is loaded, will delete all existing HTML:
+
+##LIKE:::
+<button type="button" onclick="document.write(5 + 6)">Try it</button>
+AS onclick,, SO DOCUMENT IS ALREADY LOADED.
+
+
+window.alert(9+34);////DISPLAYING IN ALERT BOX
+alert(8+84);
+
+
+
+###JavaScript does not have any print object or print methods.
+
+   You cannot access output devices from JavaScript.
+
+   The only exception is that you can call the window.print() method in the browser to print the content of the current window.
+ <body>
+    <button onclick="window.print()"></button>
+    <button onclick="print()"></button>
+ </body>
+
+
+##STATEMENTS
+var x = 5,y = 6, z = x + y;
+arert(z);
+<p id="show"></p>
+document.getElementById("show").innerHTML="The value of Z is"+z+".";
+
+
+<p id="hi"></p>
+<script>
+  document.getElementById("hi").innerHTML="SHISHIR"+"  "+"AHMMED";
+</script>
+
+###JavaScript is Case Sensitive
+
+
+###TO DO COMMENTS
+// & /*....*/ ARE USED EX:
+//THIS IS A COMMENT
+/*THIS IS ALSO A COMMENT*/
+
+
+###VARIABLES
+<script>
+  var x=5;
+  var y=45;
+  var name="shishir ahmmed";
+  
+  document.getElementById("hi").innerHTML= x + "<br>" + name + "<br>" + y;
+</script>
+
+
+##
+<script>
+   document.getElementById("hi").innerHTML= "x==y"+ " "+ "y=z";
+   ##here "x==y" returns true or false;
+</script>
+
+
+###ARRAY
+
+<script>
+
+    var person= {
+          f_name: "john",
+	  l_name: "doe",
+    	  age: 50,
+ 	  e_color
+    };
+          
+document.getElementById("hi").innerHTML=person.f_name + "is " + person.age + " years old.";
+
+</script>
+
+#### "typeof" RETURNS THE DATA TYPE OF A VARIABLE
+<script>
+    <p id="hi"></p>
+   document.getElementById("hi").innerHTML= typeof "" + "</br>" + typeof 314;
+</script>
+
+#####IF A VARIABLE IS ASSIGNED AS "VAR X= NULL", THEN THE VARIABLE IS TREATED AS OBJECT.
+####ON THE OTHER HAND WE CAN MAKE A VARIABLE UNDEFINED USING "var x= undefined"...
+
+###PREMITIVE DATA TYPE....
+STRING,NUMBER,BOOLEAN,UNDEFINED
+
+###COMPLEX DATA TYPE
+typeof, object
+
+
+
+
+####EVERTHING CAN BE ACCESSED BY   ""window dot(.)""
+...innerHTML= window.carname;
+
+##VAR IS UNDER WINDOW OBJECT BUT  LET IS NOT.
+
+###Redeclaring a var variable with let, in the same scope, or in the same block, is not allowed.
+   Redeclaring a let variable with let, in the same scope, or in the same block, is not allowed.
+   Redeclaring a let variable with var, in the same scope, or in the same block, is not allowed.
+   
+
+##Redeclaring a variable with let, in another scope, or in another block, is allowed.
+  EX:
+       let x = 2;       // Allowed
+       {
+          let x = 3;   // Allowed
+       }
+
+
+##WE can use a variable before it is declared:
+    <script>
+        carName = "Volvo";
+        document.getElementById("demo").innerHTML = carName;
+        var carName; // HERE IT IS.
+    </script>
+   
+
+##This will result in a ReferenceError:
+
+     carName = "Volvo";// WAITING FOR DECLARATION 
+     let carName;// R.ERROR , BECAUSE, LET IS USED BEFORE DECLARATION.
+
+
+
+####THIS WILL LEAD ..Assignment to constant variable ERROR.
+<script>
+try {
+  const PI = 3.141592653589793;
+  PI = 3.14;
+}
+catch (err) {
+  document.getElementById("demo").innerHTML = err;
+}
+</script>
+
+
+
+
+####CONST BEHEVES LIKE LET
+Declaring a variable with const is similar to let when it comes to Block Scope.
+
+var x = 10;
+// Here x is 10
+{
+  const x = 2;
+  // Here x is 2
+}
+// Here x is 10
+
+
+###JavaScript const variables must be assigned a value when they are declared.
+
+The keyword const is a little misleading.
+It does NOT define a constant value. It defines a constant reference to a value.
+Because of this, we cannot change constant primitive values, but we can change the properties of constant objects.
+
+const cars = ["Saab", "Volvo", "BMW"];
+const cars =["volvo","toyota","bmw"];
+cars[2]="Audi";
+
+
+####WE can NOT reassign a constant array. THIS WILL LEAD....TypeError: Assignment to constant variable.
+EX:
+   const cars= ["Audi", "Toyota"];
+   cars= ["Saad", "Bmw"];////ERROR
+
+
+####var or let variable to const, in the same scope, or in the same block, is not allowed.
+
+{
+  const x = 2;   // Allowed
+  const x = 3;   // Not allowed
+  x = 3;         // Not allowed
+  var x = 3;     // Not allowed
+  let x = 3;     // Not allowed
+}
+
+
+
+###HOISTING
+
+<p id="demo"></p>
+
+<script>
+   x = 5; // Assign 5 to x
+   elem = document.getElementById("demo"); // Find an element 
+   elem.innerHTML = x;           // Display x in the element
+   var x; // Declare x
+</script>
+
+->LIKE:
+    x=5; 
+    getid=document.getElementById("demo");
+    getid.innerHTML=x;
+    var x;
+
+
+###Using a let variable before it is declared will result in a ReferenceError.
+   The variable is in a "temporal dead zone" from the start of the block until it is declared.
+EX:  car= "volvo";
+     let car;
+
+
+###Using a const variable before it is declared, is a syntax errror.
+EX:    car= "volvo";
+       const car;
+
+
+### + and += CAN BE USED FOR concatenate STRINGS.
+EX:
+var txt= "what a";
+txt+="busy day";
+
+
+
+####
+==	equal to
+===	equal value and equal type
+!==	not equal value or not equal type
+instanceof    Returns true if an object is an instance of an object type
+typeof	      Returns the type of a variable
+<<	Zero fill left shift
+>>	Signed right shift
+>>>	Zero fill right shift	5 >>> 1
+^       Bitwise XOR 
+
+var x = {firstName:"John", lastName:"Doe"};    // Object
+
+#OBJECT TYPE VARIABLE
+var car={brand_name:"Audy", origin:"Japan"};
+
+
+#JavaScript evaluates expressions from left to right
+var plus= 23+4+"audi";
+-->OUTPUT:: 27audi
+
+
+#DYNAMIC VARIABLE
+EX:
+  var x=3;
+  x= "komol";
+  <p id="demo"></p>
+  document.getElementById("demo").innerHTML=x;///PRINTS  komol.
+  
+
+
+#FOR BIG AND SMALL NUMBERS
+var x= 34e5;
+var xr= 43e-5;
+
+## IN JavaScript that typeof null is an object 
+EX: 
+   var c={"audy", "volvo"};
+   c= null;  // output: object.
+   c = undefined; //making 'c' in value and type undefined;
+
+### 'undefined' and 'null' are equal in value but different in type.
+## A primitive data value is a single simple data value with no additional properties and methods.
+
+### typeof CAN RETURN THESE FOUR PREMITIVE TYPES. THOSE ARE: number, string, undefined, boolean.
+    typeof also CAN RETURN TWO COMPLEX DATA TYPES. THOSE ARE: function, object.
+//for functions: typeof function myFunc(){}
+
+
+#LET'S PRACTICE a FUNCTION
+EX: CONVERT CELCIOUS TO FARENHITE
+
+
+<p id="demo"></p>
+<script>
+    function toFarenhite(c){
+          return ((9/5)*c)+32; 
+    }  
+   
+    var gid=document.getElementById("demo");
+    gid.innerHTML= toFarenhite(50);
+</script>
+
+
+
+##OBJECT VARIABLE
+ var x= 'hi';// SINGLE VALUE
+var xu= {name:"salman", age:"4324"};//MULTIPLE VALUE
+
+<script>
+     var xu= {name:"salman", age:"4324"};//MULTIPLE VALUE
+     var gid=document.getElementById("demo");
+     gid.innerHTML= "Name is " + xu.name + " and Age is " + xu.age + ".";
+</script>
+
+
+
+###Methods are actions that can be performed on objects.
+<script>
+
+var person = {
+  firstName: "John",
+  fullName : function() {
+    return this.firstName;
+  }
+};
+document.getElementById("demo").innerHTML = person.fullName();
+
+</script>
+
+
+###In a function, in strict mode, this is undefined.
+  { full name: function(){return this.firstname +" "+ this.lastname;}
+  };
+    gid.innerHTML = person.fullName();
+
+
+###ALONE:
+EX: In a browser window the Global object is [object Window].
+  var x= this;
+
+
+
+### in strict MODE
+
+<script>
+"use strict";
+var x = this;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+
+####IN JS ONE OBJECT CAN REFER OTHER OBJECT
+IT'S LIKE GETTING ATTRIBUTES OF A OBJECTS FROM OTHER OBJECT'S METHOD.
+
+EX:  
+       var car={
+             drive: function(){ return this.brake+ "  " + this.way;}
+             }
+      var ways={brake: "ponse", way: "push"} 
+      var x= car.drive.call(ways)
+      var gid=document.getElementById("demo")
+      gid.innerHTML=x;
+
+
+
+####STRICT MODE: BANS US TO USE UNDECLARED VARIABLES, RISES AN ERROR.
+EX: 
+  "use strict";  //FOR GO IN STRICT MODE;
+   x = 3.14;       // This will cause an error because x is not declared
+
+
+
+###DELAION OF ANY OBJECT OR VARIABLE IS ALSO ERROR
+Deleting a variable, or object, or function is not allowed.
+
+"use strict";
+var x = 3.14;
+delete x; //ERROR
+
+#DUPLICATE NAMED VARIABLE IS NOT ALLOWED
+EX:  function x(p1, p1);//  ERROR
+
+
+
+####IN STRICT MODE NO WINDOW OBJECT..
+"use strict";
+function myFunction() {
+  alert(this); // will alert "undefined"
+}
+myFunction();
+
+###eval(), get x(), with statement, read-only Property ARE NOT ALLOWED IN STRICT MODE.
+
+###ARRAY,,,,,ARRAYs ARE OBJECTS
+   Arrays are special kinds of objects
+EX:
+var cars = ["Saab", "Volvo", "BMW"]
+
+
+###TWO PROCESSES:
+1. var points = [40,100];///GOOD PRACTICE
+2. var points = new Array(40, 100);///BAD PRACTICE
+
+
+### WE can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+
+myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;
+
+
+####Main DIFFERENCE BETWEEN OBJECT AND ARRAY IN EXPRESSION (PARANTHESIS) AND INDEX SYSTEM.
+var cars = ["Saab", "Volvo", "BMW"]///ARRAY
+var cars = {name:"Saab", origin:"japan"}///object
+person["firstName"] = "John";
+person["lastName"] = "Doe";    ///object
+person["age"] = 46;            
+
+AND:::INDEX SYSTEM:
+In JavaScript, arrays use numbered indexes.  
+In JavaScript, objects use named indexes.
+
+
+
+####LET'S SEE THE NUMBER OF THE MEMBERS OF THE ARRAY
+EX:
+<p id="demo"></p>
+<script>
+      var cars=["audi","volvo"];
+      var x = cars.length;   
+      var gid=document.getElementById("demo");
+      gid.innerHTML=x;
+</script>
+
+
+
+##FOR FIRST AND LAST ARRAY MEMBERS
+var x= cars[0]///FIRST MEMBER
+var last = cars[cars.length-1];///LAST MEMBER
+
+
+####
+<ol>    ordered list.
+
+
+<ul>    defines an UNORDERED (bulleted) LIST.
+<li>    to create unordered lists.
+Use the <ul> tag together with the   <li>    tag to create unordered lists.
+
+
+###NOW WE WILL SEE THE MEMBERS OF AN ARRAY 
+EX1:
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+
+
+EX2:  SIMILAR
+<script>
+var fruits, text;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+} 
+</script>
+
+
+
+####TO DETECT AN ARRAY 
+1.BY Array.isArray(array name)
+fruits=['10','23'];
+var gid=document.getElementById("demo");
+gid.innerHTML=Array.isArray(fruits);////////will return TRUE/FALSE
+
+2.USING instanceof.....
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+gid.innerHTML=fruits instanceof Array;
+
+
+####TO DELETE THE LAST MEMBER OF ARRAY
+fruits.pop();
+####TO ADD THE LAST MEMBER OF ARRAY
+fruits.push("");
+####TO SORT ARRAY
+fruits.sort();///ALPHABATICALLY
+
+
+####EVENT
+TO KNOW THE TIME/DATE USING   gid.Date();
+1.EX:
+<button onclick="gid.innerHTML = Date()">The time is?</button>
+
+2.EX:SHOWING TIME ON THE BUTTON
+<button onclick="this.innerHTML = Date()">The time is?</button>
+
+3.EX:MAKES BUTTON AND SHOWS
+
+<button onclick="displayDate()">The time is?</button>
+
+
+
+###NAN (NOT A NUMBER)--->not a legal number---> TYPEOF NAN is NUMBER.
+var x= 19/"apple";
+var gid=document.getElementById("demo");
+gid.innerHTML= isNaN(x);////returns TRUE
+
+
+###TO CHANGE THE BASE FROM BASE 2 TO BASE 36
+EX: USING ..... toString(2.....36)
+ 
+var x= 455;
+var gid=document.getElementById("demo");
+gid.innerHTML=x.toString(2);
+
+
+
+####TO VIEW A NUMBER IN EXPONENTIOL FORM USE 	VARIABLE.toExponential()--->returns string
+var x = 9.656;
+x.toExponential(2);     // returns 9.66e+0
+x.toExponential(4);     // returns 9.6560e+0
+x.toExponential(6);     // returns 9.656000e+0
+
+
+###TO CONVERT TO NUMBER
+Number()	//Returns a number, converted from its argument.
+parseFloat()	//Parses its argument and returns a floating point number
+parseInt()      //Parses its argument and returns an integer
+
+##parseInt() & parseFloat  Converts the first number of a string.
+parseInt("10 years");   // returns 10
+parseInt("years 10");   // returns NaN
+
+
+
+####STRING 
+var s="alksdjf";
+var s= new String("adklfj");  ////object
+
+
+##TO LOCATE THE STARTING POSITION
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");//////OUTPUT: 7
+
+
+
+##The lastIndexOf() method returns the index of the LAST occurrence of a specified text
+var pos = str.lastIndexOf("locate");
+
+
+##Both indexOf(), and lastIndexOf() return -1 if the text is not found.
+
+
+var pos = str.indexOf("locate",15)//// SEARCH STARTS FROM INDEX 15(begin to end)
+var pos = str.lastIndexOf("locate",15)////SEARCH STARTS FROM INDEX 15(end to begin)
+
+
+
+###SEARCH FOR STRING IN A STRING
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");/////////////IT DOES NOT ACCEPT SECOND PARAMETER
+
+
+###str.slice IS USED TO SLIECE..
+var res = str.slice(7, 13);
+var res = str.slice(-12, -6);
+
+##substring(7,13) WORKS AS .slice(7,13) but dose not accept negetive value. 
+
+
+######var res = str.substr(7, 6);
+THIS FUNCTION STRATS FORM FIRST INDEDEX (7) AND TAKES STRING LENGTH OF SECOND INDEX (6)
+EX:
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);
+\\\OUTPUT:  Banana
+
+var res = str.substr(7);
+\\\\OUTPUT:  Banana, Kiwi
+
+
+###.replace("adhf","adsklfj") FINDS "adhf" AND REPLACE IT "adsklfj"
+EX:
+
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+
+OUTPUT: Please visit W3Schools!
+
+####.replace() IS CASE SENCETIVE. TO MAKE CASE INSENCETIVE...   (/  /i," ")
+EX:
+ txt = str.replace(/MICROSOFT/i,"W3Schools");
+
+
+####TO CONVERT UPPERCASE
+ar text1 = "Hello World!";       // String
+var text2 = text1.toUpperCase(); 
+OUTPUT: HELLO WORLD
+
+####TO CONVERT LOWERCARCASE
+ar text1 = "Hello World!";       // String
+var text2 = text1.toLowerCase()
+OUTPUT: hello world
+
+
+####concat() Joins two or more strings
+EX: var text =text.concat("  "Hello"", "World!");
+               "Hello"
+
+#####trim()  Removes whitespace from both sides of a string:
+var str = "       Hello World!        ";
+alert(str.trim());
+OUTPUT: Hello World!
+
+
+
+####.padStar(4,0)  and  .padEnd(4,0) used to show
+str = str.padStart(4,9);
+// result is 9995
+
+str = str.padEnd(4,0);
+// result is 5000
+
+
+
+####.charAt(0) returns CHARECTER
+var str = "HELLO WORLD";
+str.charAt(0);   // returns H
+
+####.charCodeAt(0) returns UNICODE
+var str = "HELLO WORLD";
+str.charCodeAt(0);         // returns 72
+
+
+###CONVERSION OF STRING TO ARRAY USE SPLIT
+EX:
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe
+
+EX: 
+  var str = "a,b,c,d,e,f";
+  var arr = str.split(",");
+  document.getElementById("demo").innerHTML = arr[0];
+OUTPUT: a
+
+EX:
+var str = "Hello";
+var arr = str.split("");
+//////CONVERT THE STRING TO ARRAY
+
+
+##IN ARRAY    arrayName.push("")  is used to push in array and returns the array length.
+
+##IN ARRAY    arrayName.shift()  IS USED TO REMOVE THE FIRST ELEMENT
+
+
+##IN ARRY     arrayName.unshift() IS USED TO ADD ELEMENT AT BEGINING
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits
+
+
+###arrayName.splice() IS USED IN BOTH DELATION AND INSERTION.
+
+INCERTION....
+
+var removed = fruits.splice(2, 2, "Lemon", "Kiwi");/////HOLDS THE DELETED ITEM
+////FROM INDEX = 2
+2 NUMBER OF ITEM TO BE DELETED 
+Lemon and Kiwi will be added
+
+
+
+DELATION....
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(0, 1);
+////OUTPUT: INDEX 0 AND 1 ELEMENT WILL BE DELETED
+
+## .slice(1) METHOD creates a new array. 
+   It does not remove any elements from the source array.
+
+-->  .slice(1,3) METHOD DELETES INDEX 1 TO LESS THAN 3 INDEX
+-->  .slice(1) METHOD DELETES INDEX 1 TO REST
+
+
+
+###LIKELY IF ELSE
+var voteable = (age <18) ? "Too young" : "Old enough";
+alert(voteable);
+
+
+
+####MATH
+Math.random() 	RETURNS THE RANDOM VALUE.
+var x = Math.max(10, 20);  RETURNS THE MAX VALUE
+
+
+####DATE
+var d= new Date();//CURRENT DATE
+d.getFullYear()///////FULL YEAR
+month=d.getMonth()/////MONTH
+d.getFullYear(2020);/////SET THE YEAR OF A DATE OBJECT TO 2020
+
+
+
+#####SWITCH:
+-->Switch cases use strict comparison (===).
+EX:
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+
+######LOOPS
+for ---> loops through a block of code a number of times
+for/in -----> loops through the properties of an object
+for/of ----> loops through the values of an iterable object
+while -----> loops through a block of code while a specified condition is true
+do/while ---> also loops through a block of code while a specified condition is true
+
+
+#####ARRAY SORTING
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();        // First sort the elements of fruits
+fruits.reverse();     // REVERSE THE ORDER
+
+///COMPARES AND SORT
+var points = [-40, -100, 1, 5, 25, -10];
+points.sort(function(a, b){return a - b});///SORTING ACCENDING
+points.sort(function(a, b){return b - a});
+
+###FINDING MAX element in ARRAY
+EX:
+arr=[40, 100, 1, 5, 25, 10];
+var x= Math.max.apply(null, arr);
+document.getElementById("demo").innerHTML =x;
+
+
+
+###To finding the min element in array
+arr=[40, 100, 1, 5, 25, 10];
+var x= Math.min.apply(null, arr);
+document.getElementById("demo").innerHTML =x;
+
+
+####SORT IN OBJECT'S STRING
+<script>
+var cars = [
+  {type:"30olvo", year:2016},
+  {type:"2aab", year:2001},
+  {type:"30BMW", year:2010}
+];
+function myFunction() {
+  cars.sort(function(a, b){
+    var x = a.type.toLowerCase();
+    var y = b.type.toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+  });
+}
+////OUTPUT: 
+           2aab
+           30BMW
+           30olvo
+
+
+
+####LOOPS CAN BE USED IN ARRAY OR CLASSES
+EX: 
+	for(x 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+######SOME CSS TO MAKE ORDERD OR UNORDERED LIST
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+</style>
+</head>
+<body>
+
+<h2>Lists</h2>
+<p>Example of unordered lists:</p>
+<ul class="a">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ul class="b">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<p>Example of ordered lists:</p>
+<ol class="c">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ol class="d">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+</body>
+</html>
+
+
+####ANOTHER ONE WHICH IS USEFUL FOR CSS..
+<p>Expand line height in a list:</p>
+<ul style="line-height:180%">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<p>Reduce line height in a list:</p>
+<ul style="line-height:80%">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+
+#####ANOTHER ONE
+<h1>A list in a list in a list</h1>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea
+        <ul>
+          <li>China</li>
+          <li>Africa</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+
+
+
+
+
